@@ -1,0 +1,8 @@
+[core]
+    excludesfile = /home/eher/.gitignore
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[commit]
+    gpgsign = true
