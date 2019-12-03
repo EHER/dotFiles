@@ -1,13 +1,15 @@
-if [ -d "$HOME/.bash_aliases.d" ]; then
-    source $HOME/.bash_aliases.d/*
+if [ -d ~/.bash_aliases.d ]; then
+    for alias in $(ls ~/.bash_aliases.d/); do
+        . ~/.bash_aliases.d/$alias;
+    done
 fi
 
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d ~/bin ] ; then
+    PATH="~/bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -d ~/.local/bin ] ; then
+    PATH="~/.local/bin:$PATH"
 fi
 
 if [ -d $GOPATH/bin ]; then
@@ -18,9 +20,9 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-if [ -d $HOME/.asdf ]; then
-    . $HOME/.asdf/asdf.sh
-    . $HOME/.asdf/completions/asdf.bash
+if [ -d ~/.asdf ]; then
+    . ~/.asdf/asdf.sh
+    . ~/.asdf/completions/asdf.bash
 fi
 
 if [ -f ~/git/github.com/nojhan/liquidprompt/liquidprompt ]; then
