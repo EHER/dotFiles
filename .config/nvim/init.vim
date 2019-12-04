@@ -16,11 +16,14 @@ call plug#begin()
 "    Plug 'morhetz/gruvbox'
 "    Plug 'EHER/gruvbox-workflow'
 
-"    Plug 'rakr/vim-one'
+    Plug 'rakr/vim-one'
 "    Plug 'EHER/vim-one-workflow' "TODO
 
-    Plug 'chriskempson/base16-vim'
+"    Plug 'chriskempson/base16-vim'
 "    Plug 'EHER/base16-vim-workflow' "TODO
+
+"    Plug 'altercation/vim-colors-solarized'
+"    Plug 'EHER/vim-colors-solarized-workflow' "TODO
 
     Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
     Plug 'EHER/phpactor-workflow'
@@ -53,16 +56,21 @@ set secure exrc hidden
 autocmd BufRead,BufNewFile *.html setlocal shiftwidth=2 tabstop=2 cc=70 textwidth=70
 
 " Should be move into EHER/vim-one-workflow
-"colorscheme one
+colorscheme one
 
 " Should be move into EHER/base16-workflow
-let base16colorspace=256
-let &t_8b = "\48;2;%lu;%lu;%lum"
-let &t_8f = "\38;2;%lu;%lu;%lum"
-set background=dark
-set t_Co=256
-set termguicolors
-colorscheme base16-default-dark
+"let base16colorspace=256
+"let &t_8b = "\48;2;%lu;%lu;%lum"
+"let &t_8f = "\38;2;%lu;%lu;%lum"
+"set background=dark
+"set t_Co=256
+"set termguicolors
+"colorscheme base16-default-dark
+
+" Should be move into EHER/vim-colors-solarized-workflow' "TODO
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
 
 " Should be moved into EHER/vim-auto-save-workflow' "TODO
 let g:auto_save = 1  " enable AutoSave on Vim startup
